@@ -19,8 +19,12 @@ public class Alimento {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id; 
 
+    @JsonProperty("nombre")
+    @JsonAlias("nombre")
     String nombre;
 
+    @JsonProperty("valor energetico")
+    @JsonAlias("valor energetico")
     Integer calorias;
 
     public Alimento(Integer calorias, String nombre){
