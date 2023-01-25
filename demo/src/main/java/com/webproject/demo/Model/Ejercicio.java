@@ -23,7 +23,11 @@ public class Ejercicio {
     @JsonAlias("nombre")
     String nombre;
 
-    public Ejercicio(String nombre, Integer gasto){
+    @JsonProperty("met")
+    @JsonAlias("met")
+    Integer met;
+
+    public Ejercicio(String nombre){
         this.nombre = nombre;
     }
 

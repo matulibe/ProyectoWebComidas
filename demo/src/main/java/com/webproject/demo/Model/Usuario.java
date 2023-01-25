@@ -35,10 +35,15 @@ public class Usuario {
     @JsonAlias("peso")
     Integer peso;
 
-    public Usuario(String name, Integer weight, Integer age){
+    @JsonProperty("altura")
+    @JsonAlias("altura")
+    Integer altura;
+
+    public Usuario(String name, Integer weight, Integer age, Integer height){
         this.nombre = name;
         this.edad = age;
         this.peso = weight;
+        this.altura = height;
     }
 
     public void setPeso(Integer pesoNuevo){
