@@ -17,7 +17,7 @@ public class Ejercicio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer id;
+    Integer ejercicioId;
 
     @JsonProperty("nombre")
     @JsonAlias("nombre")

@@ -17,7 +17,7 @@ public class Alimento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer id; 
+    Integer alimentoId; 
 
     @JsonProperty("nombre")
     @JsonAlias("nombre")

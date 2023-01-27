@@ -17,7 +17,7 @@ import javax.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer id;
+    Integer userId;
 
     @JsonProperty("nombre")
     @JsonAlias("nombre")
