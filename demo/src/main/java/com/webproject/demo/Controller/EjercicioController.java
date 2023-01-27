@@ -1,10 +1,8 @@
 package com.webproject.demo.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 
 import com.webproject.demo.Model.Ejercicio;
 import com.webproject.demo.Service.EjercicioService;
@@ -23,7 +21,7 @@ public class EjercicioController {
 
     @PostMapping(path="ejercicios")
     @ResponseStatus(HttpStatus.CREATED)
-    public createEjercicio(@RequestBody Ejercicio ejercicio){
-        return EjercicioService.createEjercicio(ejercicio);
+    public Ejercicio createEjercicio(@RequestBody Ejercicio ejercicio){
+        return this.ejercicioService.createEjercicio(ejercicio);
     }
 }
